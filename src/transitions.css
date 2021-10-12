@@ -1,0 +1,74 @@
+.efeito {
+    position: relative;
+    box-sizing: border-box;
+    transition: all 400ms ease;
+}
+
+.efeito-1 {
+    background: '#3CDE87';
+}
+
+.efeito-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 64px;
+    background: rgba(60, 222, 135, .5);
+    transition: all 2s ease;
+}
+
+.efeito-1:hover::before {
+    width: 100%;
+}
+
+.images {
+    image-rendering: pixelated;
+}
+
+.grids {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    justify-items: center;
+}
+
+.grids * {
+    transition: all .5s;
+    width: 280px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.grids *:hover .p1 {
+    transform: translateY(-50px);
+}
+
+.grids *:hover .p2 {
+    transform: translateY(-30%);
+}
+
+@media screen and (max-width: 640px) {
+    .grids * {
+        transition: none;
+    }
+    .p2 {
+        margin-top: -40%;
+        background-color: white;
+        position: relative;
+    }
+    .grids *:hover .p1 {
+        transform: none;
+    }
+    .grids *:hover .p2 {
+        transform: none;
+    }
+}
+
+.p1 {
+    height: 100%;
+}
+
+.p2 {
+    min-height: 250px;
+}
