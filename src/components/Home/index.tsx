@@ -1,41 +1,66 @@
-import React, { Component } from "react";
+/* eslint-disable @typescript-eslint/no-useless-constructor */
+import React, { Component } from 'react';
 
 import Typing from 'react-typing-animation';
 
 import vector from '../../assets/vector.svg';
 import image from '../../assets/img.svg';
 
+import doc from '../../assets/docs/Currículo - Marcos Guilherme | Dev FullStack- Roxo.pdf';
+
 import '../../transitions.css';
 
-interface IPageState {
-
-};
+interface IPageState {}
 
 export default class Home extends Component<any, IPageState> {
     constructor(props: IPageState) {
         super(props);
-    };
+    }
 
     render() {
         return (
-            <div className='flex justify-center w-full pt-36 lg:pt-0 lg:grid lg:grid-cols-2 lg:pl-10 lg:h-5/6 font-display'>
-                <form action={"#aboutMe"} className='flex flex-col items-center justify-center w-full lg:items-start'>
-                    <Typing speed={150}>
-                        <h1 className='text-3xl font-bold select-none lg:text-7xl text-texts'>Hey,</h1>
+            <form
+                action="#aboutme"
+                className="flex items-center justify-center w-full grid-cols-2 md:grid h-5/6"
+            >
+                <div className="flex flex-col items-center justify-center ">
+                    <div className="pb-4 pl-2 md:w-6/12">
+                        <h1 className="text-3xl font-semibold md:text-xl lg:text-3xl font-display text-texts ">
+                            Hello World, i'm the
+                        </h1>
+                        <h1 className="text-3xl font-semibold md:text-xl lg:text-3xl font-display text-secondary">
+                            Guilherme Nunes,
+                        </h1>
+                        <span className="text-base text-tertiary font-secondary">
+                            fullstack developer.
+                        </span>
+                    </div>
 
-                        <h1 className='text-4xl font-bold select-none lg:text-7xl text-tertiary'>I am Guilherme</h1>
-
-                        <h1 className='text-2xl font-bold select-none lg:text-5xl text-texts'>full stack developer</h1>
-                    </Typing>
-                    <button type='submit' className='w-11/12 p-4 mt-5 text-2xl border-2 efeito efeito-1 text-texts border-secondary'>
-                        <i className="mr-2 fas fa-info-circle"></i>About me
-                    </button>
-                </form>
-                <div className='items-center justify-end hidden mt-5 lg:flex'>
-                    <img src={vector} alt="" className='w-7/12 images' />
-                    <img src={image} alt="" className='absolute w-4/12 images ' />
+                    <div className="flex flex-col w-full gap-2 md:grid-cols-2 md:grid md:w-6/12">
+                        <a
+                            className="flex items-center justify-center text-sm border bg-secondary rounded-3xl text-texts hover:bg-primary border-secondary"
+                            href={doc}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i className="mr-2 fas fa-file-download"></i>
+                            Download CV
+                        </a>
+                        <button
+                            type="submit"
+                            className="flex items-center justify-center p-2 text-sm border border-secondary rounded-3xl text-texts box"
+                        >
+                            <i className="mr-2 fas fa-info" />
+                            <h2 className="relative">About-me</h2>
+                        </button>
+                    </div>
                 </div>
-            </div >
+
+                <div className="items-center justify-center hidden md:flex">
+                    <img src={image} alt="image" className="w-1/2 " />
+                </div>
+            </form>
         );
-    };
-};
+    }
+}
