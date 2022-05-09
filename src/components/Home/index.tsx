@@ -1,12 +1,9 @@
 /* eslint-disable @typescript-eslint/no-useless-constructor */
 import React, { Component } from 'react';
 
-import Typing from 'react-typing-animation';
-
-import vector from '../../assets/vector.svg';
 import image from '../../assets/img.svg';
 
-import doc from '../../assets/docs/Currículo - Marcos Guilherme | Dev FullStack- Roxo.pdf';
+import doc from '../../assets/docs/Currículo - Marcos Guilherme  Dev FullStack- Roxo.pdf';
 
 import '../../transitions.css';
 

@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-useless-constructor */
 import React, { Component } from 'react';
+import { Icon } from '@iconify/react';
+import Toggle from 'react-toggle';
 
 import '../../transitions.css';
 
